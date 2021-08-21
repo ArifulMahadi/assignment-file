@@ -88,3 +88,14 @@ document.getElementById('free-delivery').addEventListener('click',function(){
 //     }
 // })
 
+document.getElementById("promo-button").addEventListener('click',function(){
+    const finalTotal=document.getElementById("final-total");  
+    const inputField=document.getElementById("code-text");
+    const inputFieldText=inputField.value;
+    const totalPrice=document.getElementById('total-price');
+    const totalAmmount=parseInt(totalPrice.innerText);
+    inputField.value='';
+    if(inputFieldText=='stevekaku'){
+         finalTotal.innerText  =(totalAmmount*80)/100
+     }   
+})
